@@ -41,7 +41,7 @@ const Hero = props => {
   const heroImg = props.heroImg || fluid.src
 
   return (
-    <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
+    <HeroContainer style={{ backgroundImage: `url("${heroImg}")`, width: '100%' }}>
       <TitleContainer>
         <HeroTitle>{props.title}</HeroTitle>
         {props.subTitle && <HeroSubTitle>{props.subTitle}</HeroSubTitle>}

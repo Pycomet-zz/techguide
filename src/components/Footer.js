@@ -135,23 +135,12 @@ const Footer = () => {
             .
           </p>
           <p className="footer-item-text">
-            Theme using{' '}
+            Product of {' '}
             <a
               className="footer-link"
-              href="https://github.com/maxpou/gatsby-starter-morning-dew"
+              href="https://weblulue.com"
             >
-              gatsby-starter-morning-dew
-            </a>
-            .
-          </p>
-          <p className="footer-item-text">
-            Hosted with{' '}
-            <span className="footer-heart" role="img" aria-label="Love">
-              ❤
-            </span>{' '}
-            by{' '}
-            <a className="footer-link" href={websiteHost.url}>
-              {websiteHost.name}
+              Weblulue
             </a>
             .
           </p>

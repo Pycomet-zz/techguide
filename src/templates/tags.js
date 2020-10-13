@@ -10,6 +10,7 @@ import Hero from '../components/Hero'
 
 const PageTitle = styled.h1`
   padding-bottom: 10px;
+  text-align: center;
 `
 
 class Tags extends React.Component {
@@ -21,9 +22,11 @@ class Tags extends React.Component {
       <Layout location={this.props.location}>
         <SEO title={`Top blog posts on ${this.props.pageContext.tag}`} />
         <Hero title={pageTitle} />
+        <br />
+
+        <PageTitle>Posts tagged as {this.props.pageContext.tag}</PageTitle>
 
         <Wrapper>
-          <PageTitle>Posts tagged as {this.props.pageContext.tag}</PageTitle>
           <PostsList posts={posts} />
         </Wrapper>
       </Layout>

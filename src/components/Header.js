@@ -75,7 +75,7 @@ const HeaderLinkTitleContent = styled.span`
 
 const HeaderImage = styled.img`
   padding: 4px;
-  height: 57px;
+  height: 90px;
 `
 
 const MobilePanel = styled.div`
@@ -254,3 +254,4 @@ const Header = () => {
 }
 
 export default Header
+ 
