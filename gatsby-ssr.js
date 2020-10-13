@@ -1,5 +1,7 @@
-import React from 'react'
-import Terser from 'terser'
+import React from 'react';
+import Terser from 'terser';
+import "firebase/auth";
+import "firebase/database";
 
 import {
   COLOR_MODE_KEY,

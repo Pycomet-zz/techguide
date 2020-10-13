@@ -1,7 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import useSiteMetadata from '../hooks/use-site-config'
-import useSiteImages from '../hooks/use-site-images'
+import React from 'react';
+import styled from 'styled-components';
+import useSiteMetadata from '../hooks/use-site-config';
+import useSiteImages from '../hooks/use-site-images';
+
+import firebase from "gatsby-plugin-firebase";
+// import { useObjectVal } from "react-firebase-hooks/database"
 
 const HeroContainer = styled.div`
   position: relative;
@@ -40,11 +43,24 @@ const Hero = props => {
   const { fluid } = useSiteImages(siteCover)
   const heroImg = props.heroImg || fluid.src
 
+  const [user, setUser] = React.useState(null)
+
+  React.useEffect(() => {
+    firebase
+      .database()
+      .ref('/data')
+      .once('value')
+      .then(snapshot => {
+        setUser(snapshot.val())
+      })
+  }, [])
+
   return (
     <HeroContainer style={{ backgroundImage: `url("${heroImg}")`, width: '100%' }}>
       <TitleContainer>
-        <HeroTitle>{props.title}</HeroTitle>
+      <HeroTitle>{props.title}</HeroTitle>
         {props.subTitle && <HeroSubTitle>{props.subTitle}</HeroSubTitle>}
+        {user && <HeroSubTitle>{user.name}</HeroSubTitle>}
       </TitleContainer>
     </HeroContainer>
   )

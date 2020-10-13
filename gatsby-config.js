@@ -98,5 +98,15 @@ module.exports = {
         modules: ['gatsby-starter-morning-dew'],
       },
     },
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyBeo5kkXdOc3R2tWJ2GgNhf8Dpx4NQdu2I",
+          databaseURL: "https://techguide-5c240.firebaseio.com",
+          projectId: "techguide-5c240",
+        }
+      }
+    },
   ],
 }
