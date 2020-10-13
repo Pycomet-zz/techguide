@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: 'TechGuide News Blog',
   siteDescription: 'Get the latest reports on technology news, analysis of emerging trends, and profiling of new business products by Weblulue',
   authorName: 'Alfred Emmanuel',
-  twitterUsername: 'codefredy',
+  twitterUsername: 'code_fredy',
   authorAvatar: 'avatar.jpeg', // file in content/images
   defaultLang: 'en', // show flag if lang is not default. Leave empty to enable flags in post lists
   authorDescription: `
@@ -22,7 +22,7 @@ module.exports = {
   display: 'standalone',
   icon: 'content/images/blog.png',
   postsPerPage: 6,
-  disqusShortname: 'maxpou',
+  disqusShortname: 'codefred',
   headerTitle: 'TechGuide',
   headerLinksIcon: 'blog.png', //  (leave empty to disable: '')
   headerLinks: [
@@ -42,7 +42,7 @@ module.exports = {
   // Footer information (ex: Github, Netlify...)
   websiteHost: {
     name: 'GitHub',
-    url: 'https://github.com',
+    url: 'https://github.com/weblulue',
   },
   footerLinks: [
     {
